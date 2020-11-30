@@ -1,0 +1,27 @@
+/* DOCUMENT INFORMATION
+    - Document: Ground Styling
+    - Author: Alex Megahy
+    - Description: All ground styling
+------------------------------------------- */
+
+// Ground component
+.ground {
+    background-color: $ground;
+    bottom: 0;
+    height: 10%;
+    left: 0;
+    max-height: 500px;
+    min-height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    // Ground next to fire
+    .ground-fire {
+        @include ground-animation();
+        background-color: $ground-fire;
+        border-radius: 0 0 20px 20px;
+        margin: 0 auto;
+        height: 50%;
+        width: 40%;
+    }
+}

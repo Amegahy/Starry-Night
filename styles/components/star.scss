@@ -1,0 +1,16 @@
+/* DOCUMENT INFORMATION
+    - Document: Star Styling
+    - Author: Alex Megahy
+    - Description: All star styling
+------------------------------------------- */
+
+.starContainer{
+    position: absolute;
+    .star{
+        background: $star;
+        border-radius: 20px;
+        height: 5px;
+        width: 5px;
+        z-index: 0;
+    }
+}

@@ -1,0 +1,132 @@
+/* DOCUMENT INFORMATION
+    - Document: Fire Styling
+    - Author: Alex Megahy
+    - Description: All fire styling
+------------------------------------------- */
+
+// Main flame container
+.flame-container {
+    display: inline-block;
+    height: 100px;
+    margin: 0 -30px;
+    position: absolute;
+    top: 0;
+    width: 100px;
+    z-index: 3;
+    &:nth-of-type(1) {
+        @extend .flame-container;
+        margin: 0 -50px;
+    }
+    &:nth-of-type(2) {
+        @extend .flame-container;
+        margin: 0;
+    }
+    &:nth-of-type(3) {
+        @extend .flame-container;
+        margin: 0 50px;
+    }
+}
+
+// Indiviudal flame
+.flame {
+    border-radius: 0 50% 50% 50%;
+    position: absolute;
+    // White core of flame
+    &.core {
+        background-color: $white;
+        height: 40%;
+        margin: 52%;
+        width: 40%;
+        z-index: 4;
+    }
+    // Bright center part of flame
+    &.center {
+        height: 60%;
+        margin: 34%;
+        width: 60%;
+        z-index: 3;
+        &-1 {
+            @extend .center;
+            background: $fire-yellow-1;
+        }
+        &-2 {
+            @extend .center;
+            background: $fire-yellow-2;
+        }
+        &-3 {
+            @extend .center;
+            background: $fire-yellow-3;
+        }
+    }
+    // Orange inner part of flame
+    &.inner {
+        height: 75%;
+        margin: 23%;
+        width: 75%;
+        z-index: 2;
+        &-1 {
+            @extend .inner;
+            @include fire-animation-1(inner);
+            background: $fire-orange-1;
+        }
+        &-2 {
+            @extend .inner;
+            @include fire-animation-2(inner);
+            background: $fire-orange-2;
+        }
+        &-3 {
+            @extend .inner;
+            @include fire-animation-3(inner);
+            background: $fire-orange-3;
+        }
+    }
+    // Dark outer part of flame
+    &.outer {
+        height: 100%;
+        margin-top: 20px;
+        transform: rotate(45deg);
+        width: 100%;
+        z-index: 1;
+        &-1 {
+            @extend .outer;
+            @include fire-animation-1(inner);
+            background: $fire-red-1;
+        }
+        &-2 {
+            @extend .outer;
+            @include fire-animation-2(inner);
+            background: $fire-red-2;
+        }
+        &-3 {
+            @extend .outer;
+            @include fire-animation-3(inner);
+            background: $fire-red-3;
+        }
+    }
+    // Smaller spits of fire
+    .spit {
+        border-radius: 50px;
+        position: absolute;
+        &-1 {
+            @extend .spit;
+            @include spit-animation(spit-1);
+            background-color: $fire-red-1;
+            height: 10px;
+            width: 10px;
+        }
+        &-2 {
+            @extend .spit;
+            @include spit-animation(spit-2);
+            background-color: $fire-red-2;
+            height: 15px;
+            width: 15px;
+        }
+        &-3 {
+            @extend .spit;
+            @include spit-animation(spit-3);
+            background-color: $fire-red-3;
+            height: 10px;
+            width: 10px;
+        }
+    }
+}

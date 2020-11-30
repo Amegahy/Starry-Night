@@ -1,0 +1,44 @@
+/* DOCUMENT INFORMATION
+    - Document: Logs Styling
+    - Author: Alex Megahy
+    - Description: All campfire logs styling
+------------------------------------------- */
+
+// Main log container
+.log-container {
+    display: inline-block;
+    height: 50px;
+    margin-right: -75px;
+    position: relative;
+    width: 500px;
+}
+
+.log {
+    border: 2px solid $black;
+    border-radius: 50px/25px;
+    display: inline-block;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    width: 50px;
+    &-1 {
+        @extend .log;
+        background-color: $log-1;
+        transform: rotate(80deg);
+    }
+    &-2 {
+        @extend .log;
+        background-color: $log-1;
+        transform: rotate(280deg);
+    }
+    &:before {
+        content: '';
+        border-radius: 50px/25px;
+        background-color: $log-3;
+        height: 25px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 50px;
+    }
+}

@@ -1,0 +1,37 @@
+/* DOCUMENT INFORMATION
+    - Document: Ground animations
+    - Author: Alex Megahy
+    - Description: Mixins to create the ground flickering keyframes animations
+------------------------------------------- */
+
+// Main ground flickering animation 
+@mixin ground-animation () {
+    animation-name: flicker;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 2s;
+}
+
+// Outer fire animation
+@keyframes flicker {
+    0% {
+        height: 75%;
+        width: 40%;
+    }
+    25% {
+        height: 76%;
+        width: 41.5%;
+    }
+    50% {
+        height: 77.5%;
+        width: 42.5%;
+    }
+    75% {
+        height: 76%;
+        width: 41.5%;
+    }
+    100% {
+        height: 75%;
+        width: 40%;
+    }
+}

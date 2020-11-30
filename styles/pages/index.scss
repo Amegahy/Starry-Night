@@ -1,0 +1,34 @@
+/* DOCUMENT INFORMATION
+    - Document: index.html Styling
+    - Author: Alex Megahy
+    - Description: All imports used on the index.html 
+------------------------------------------- */
+
+
+/* Globals components
+------------------------------------------- */
+
+@import '../globals/structure.scss';
+
+/* Variables
+------------------------------------------- */
+
+@import '../components/variables/colours.scss';
+@import '../components/variables/breakpoints.scss';
+
+/* Mixins
+------------------------------------------- */
+
+@import '../components/mixins/fire-animation.scss';
+@import '../components/mixins/ground-animation.scss';
+
+/* Components
+------------------------------------------- */
+
+@import '../components/fire.scss';
+@import '../components/star.scss';
+@import '../components/moon.scss';
+@import '../components/logs.scss';
+@import '../components/sky.scss';
+@import '../components/campfire.scss';
+@import '../components/ground.scss';

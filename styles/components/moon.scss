@@ -1,0 +1,47 @@
+/* DOCUMENT INFORMATION
+    - Document: Moon Styling
+    - Author: Alex Megahy
+    - Description: All moon styling
+------------------------------------------- */
+
+.moon-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    .moon {
+        background-color: #fffaeb;
+        border-radius: 100px;
+        height: 10em;
+        margin: auto;
+        position: relative;
+        width: 10em;    
+        .crater{    
+            border-radius: 50px;
+            position: absolute;
+            &-1 {
+                @extend .crater;
+                background-color: $crater-1;
+                height: 10%;
+                right: 15px;
+                top: 70px;
+                width: 10%;
+            }
+            &-2 {
+                @extend .crater;
+                background-color: $crater-2;
+                height: 30%;
+                right: 75px;
+                top: 16px;
+                width: 30%;
+            }
+            &-3 {
+                @extend .crater;
+                background-color: $crater-3;
+                height: 14%;
+                right: 95px;
+                top: 130px;
+                width: 14%;
+            }
+        }
+    }
+}

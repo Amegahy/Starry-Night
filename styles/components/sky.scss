@@ -1,0 +1,14 @@
+/* DOCUMENT INFORMATION
+    - Document: Sky Styling
+    - Author: Alex Megahy
+    - Description: All sky styling
+------------------------------------------- */
+
+.sky {
+    background-image: linear-gradient($sky-3, $sky-2, $sky-1);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

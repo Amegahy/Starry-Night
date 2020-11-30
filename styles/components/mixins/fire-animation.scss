@@ -1,0 +1,192 @@
+/* DOCUMENT INFORMATION
+    - Document: Fire animations
+    - Author: Alex Megahy
+    - Description: Mixins to create the fire keyframes animations
+------------------------------------------- */
+
+// Main fire animation 
+@mixin fire-animation ($type) {
+    animation-name: $type;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+// Spitting fire animation 
+@mixin spit-animation ($type) {
+    animation-duration: 1s;
+    animation-name: $type;
+    animation-iteration-count: infinite;
+}
+
+
+/* Vareities of the fire animation */
+
+@mixin fire-animation-1 ($type) {
+    @include fire-animation($type);
+    animation-duration: 1s;
+}
+
+@mixin fire-animation-2 ($type) {
+    @include fire-animation($type);
+    animation-duration: 2.5s;
+}
+
+@mixin fire-animation-3 ($type) {
+    @include fire-animation($type);
+    animation-duration: 1.5s;
+}
+
+// Outer fire animation
+@keyframes outer {
+    0% {
+        height: 100%;
+        left: 0;
+        width: 100%;
+    }
+    25% {
+        height: 95%;
+        left: 1px;
+        width: 95%;
+    }
+    50% {
+        height: 90%;
+        left: 0;
+        width: 90%;
+    }
+    75% {
+        height: 95%;
+        left: 1px;
+        width: 95%;
+    }
+    100% {
+        height: 100%;
+        left: 0;
+        width: 100%;
+    }
+}
+
+// Inner fire animation
+@keyframes inner {
+    0% {
+        height: 75%;
+        margin: 23%;
+        width: 75%;
+    }
+    25% {
+        height: 80%;
+        margin: 18%;
+        width: 80%;
+    }
+    50% {
+        height: 85%;
+        margin: 13%;
+        width: 85%;
+    }
+    75% {
+        height: 80%;
+        margin: 18%;
+        width: 80%;
+    }
+    100% {
+        height: 75%;
+        margin: 23%;
+        width: 75%;
+    }
+}
+
+// Spitting fire animation 1
+@keyframes spit-1 {
+    0% {
+        height: 10px;
+        top: 0;
+        width: 10px;
+    }
+    25% {
+        height: 8px;
+        top: -20px;
+        width: 8px;
+    }
+    50% {
+        height: 6px;
+        top: -40px;
+        width: 6px;
+    }
+    75% {
+        height: 3px;
+        top: -60px;
+        width: 3px;
+    }
+    100% {
+        height: 1px;
+        top: -80px;
+        width: 1px;
+    }
+}
+
+// Spitting fire animation 2
+@keyframes spit-2 {
+    0% {
+        height: 15px;
+        left: 0;
+        top: 0;
+        width: 15px;
+    }
+    25% {
+        height: 11px;
+        left: -20px;
+        top: -25px;
+        width: 11px;
+    }
+    50% {
+        height: 7px;
+        left: -40px;
+        top: -50px;
+        width: 7px;
+    }
+    75% {
+        height: 4px;
+        left: -60px;
+        top: -80px;
+        width: 4px;
+    }
+    100% {
+        height: 1px;
+        left: -80px;
+        top: -100px;
+        width: 1px;
+    }
+}
+
+// Spitting fire animation 3
+@keyframes spit-3 {
+    0% {
+        height: 10px;
+        left: 0;
+        top: 0;
+        width: 10px;
+    }
+    25% {
+        height: 8px;
+        left: -20px;
+        top: -20px;
+        width: 8px;
+    }
+    50% {
+        height: 6px;
+        left: -40px;
+        top: -40px;
+        width: 6px;
+    }
+    75% {
+        height: 3px;
+        left: -60px;
+        top: -60px;
+        width: 3px;
+    }
+    100% {
+        height: 1px;
+        left: -90px;
+        top: -70px;
+        width: 1px;
+    }
+}
